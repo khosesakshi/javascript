@@ -1,0 +1,77 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+function displayarray(arr)
+{
+console.log(`array:[${arr.join(',')}]`);
+}
+function sortarray(arr)
+{
+let sortedarray = arr.slice().sort((a,b)=>a-b);
+return sortedarray;
+}
+let array=[5,2,8,12,2,9];
+let choice;
+do
+{
+console.log(`
+menu:
+a. display array
+b. sort array
+`);
+choice=prompt ("enter your choice(a,b)");
+switch(choice)
+{
+case 'a':
+displayarray(arr);
+break;
+case 'b':
+array = sortarray(arr);
+console.log("array sorted sucessfully");
+break;
+default:
+}
+}
+</script>
+</body>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+function displayarray(arr)
+{
+console.log(`array:[${arr.join(',')}]`);
+}
+function sortarray(arr)
+{
+let sortedarray = arr.slice().sort((a,b)=>a-b);
+return sortedarray;
+}
+let array=[5,2,8,12,2,9];
+let choice;
+do
+{
+console.log(`
+menu:
+a. display array
+b. sort array
+`);
+choice=prompt ("enter your choice(a,b)");
+switch(choice)
+{
+case 'a':
+displayarray(arr);
+break;
+case 'b':
+array = sortarray(arr);
+console.log("array sorted sucessfully");
+break;
+default:
+}
+}
+</script>
+</body>
+</html>

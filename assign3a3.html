@@ -1,0 +1,21 @@
+<html>
+function sum(num) {
+  var numString = num.toString();
+  var newString = "";
+  while (numString.length > 1) { // (1)
+    newString += (parseInt(numString[0]) + parseInt(numString[numString.length - 1])).toString(); // (2)
+    numString = numString.substring(1, numString.length - 1); // (3)
+  }
+  newString += numString; // (4)
+
+  if (newString.length > 2) { // (5)
+    console.log(newString)
+    return sum(newString);
+  } else {
+    return newString;
+  }
+}
+
+
+console.log(sum(1234567));
+</html>

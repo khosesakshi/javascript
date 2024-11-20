@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+class shape{
+constructor(){
+//empty constructor base
+
+}
+calculatearea(){
+//the methhod is meant to be ovverride by subclass
+}
+}
+class Triangle extends shape
+{
+constructor(base,height)
+{
+super();
+this.base = base;
+this.height = height;
+}
+caculatearea()
+{
+return 0.5*this.base*this.height;
+}
+}
+class Square extends shape
+{
+constructor(side)
+{
+super();
+this.side=side;
+}
+caculatearea()
+{
+return this.side*this.side;
+}
+}
+const triangle = new Triangle(5,8);
+const square = new Square(4);
+console.log("Triangle area:",triangle.calculatearea());
+console.log("Square area:",square.calculatearea());
+</script>
+</body>
+</html>

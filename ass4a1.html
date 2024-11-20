@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+class department
+{
+constructor(dept_id,dept_name)
+{
+this.dept_id=dept_id;
+this.dept_name=dept_name;
+}
+getData()
+{
+console.log(`department ID:${this.dept_id}`);
+console.log(`department name:${this.dept_name}`);
+}
+}
+class employee extends department
+{
+constructor(emp_id,name,designation,salary,dept_id,dept_name)
+{
+super(dept_id,dept_name);
+this.emp_id=emp_id;
+this.name=name;
+this.designation=designation;
+this.salary=salary;
+}
+getData()
+{
+super.getData();
+console.log(`employee ID:${this.emp_id}`);
+console.log(`name:${this.name}`);
+console.log(`designation:${this.designation}`);
+console.log(`salary:${this.salary}`);
+}
+}
+const employee1 = new employee(101,"sakshi","soft debveloper",500000,1,"IT");
+employee1.getData();
+</script>
+</body>
+</html>

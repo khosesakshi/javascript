@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+class account
+{
+constructor(ac_num,customer_name)
+{
+this.ac_num=ac_num;
+this.customer_name=customer_name;
+}
+displayaccountinfo()
+{
+console.log(`account number:${this.ac_num}`);
+console.log(`customer name:${this.customer_name}`);
+}
+}
+class savingaccount extends account
+{
+constructor(ac_num,customer_name,balance,min_amt)
+{
+super(ac_num,customer_name);
+this.balance=balance;
+this.min_amt=min_amt;
+}
+displayaccountinfo()
+{
+super.displayaccountinfo();
+console.log(`account type:current account`);
+console.log(`balance:${this.balance}`);
+console.log(`minimum balance:${this.min_amt}`);
+}
+}
+const savingaccount=new savingaccount(101,"john doe",5000,1000);
+const currentaccount(102,"jane doe",8000,2000);
+console.log("saving account information");
+savingaccount.displayaccountinfo();
+console.log("current account information");
+currentaccount.displayaccountinfo();
+</script>
+</body>
+</html>

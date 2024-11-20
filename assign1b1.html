@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Factors</title>
+	<script type="text/javascript">
+	function factors()
+	{
+		var n,a;
+		a=[];
+		n=document.frm.txt.value;
+		for(i=1;i<=n;i++)
+		{
+			if(n%i==0)
+			{
+				a=a+[i]+",";
+			}
+		}
+		document.getElementById("ans").innerHTML="["+a+"]";
+	}
+</script>
+</head>
+<body>
+<form name="frm">
+Number: <input type="text" name="txt">&nbsp;
+<input type="button" value="Submit" onclick="factors()">
+<p id="ans"></p>
+</form>
+</body>
+</html>

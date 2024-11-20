@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>reverse number</title>
+<script>
+function reversenumber(num)
+{
+let reversednumber=0;
+while(num>0)
+{
+reversednumber=reversednumber * 10 + num % 10;
+num = Math.floor(num/10);
+}
+return reversednumber;
+}
+const number= prompt("enter the numbers");
+const reversednumber = reversenumber(number);
+console.log(`the reversed number is ${reversednumber}`);
+</script>
+</head>
+</html>

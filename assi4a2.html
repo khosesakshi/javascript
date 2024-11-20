@@ -1,0 +1,37 @@
+<!DOTYPE html>
+<html>
+<body>
+<script>
+class product{
+constructor(pid=0,pname="",pcost=0,quantity=0)
+{
+this.pid=pid;
+this.pname=pname;
+this.pcost=pcost;
+this.quantity=quantity;
+product.objectcount++;
+}
+displayproductioninfo()
+{
+console.log(`product id:${this.pid}`);
+console.log(`product name:${this.name}`);
+console.log(`product cost:${this.pcost}`);
+console.log(`quantity:${this.quantity}`);
+console.log("....");
+}
+static getobjectcount()
+{
+return product.objectcount;
+}
+}
+product.objectcount=0;
+const product1=new product(101,"laptop",805,5);
+const product2=new product(102,"smartphone",500,8);
+console.log("product 1 information");
+product1.displayproductinfo();
+console.log("product 2 information");
+product2.displayproductinfo();
+console.log(`total objects created:${product.getobjectcount()}`);
+</script>
+</body>
+</html>
